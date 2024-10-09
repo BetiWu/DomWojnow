@@ -161,7 +161,7 @@ body {
 }
 
 .gallery {
-    width: 50%; /* Ustawienie szerokości kontenera na 80% */
+    width: 70%; /* Ustawienie szerokości kontenera na 80% */
     max-width: 600px; /* Ustal maksymalną szerokość kontenera */
     margin: 0 auto; /* Wycentruj kontener na stronie */
     padding: 15px; /* Możesz dodać padding dla lepszego wyglądu */
