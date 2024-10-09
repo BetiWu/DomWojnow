@@ -86,4 +86,18 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.style.display = 'none';
         }
     });
+
+    // Animacja ceny
+    const animatedPriceElement = document.querySelector('.animated-price');
+
+    function animatePrice() {
+        animatedPriceElement.style.transform = 'scale(1.5)'; // Powiększanie
+        setTimeout(() => {
+            animatedPriceElement.style.transform = 'scale(1)'; // Pomniejszenie
+        }, 500); // Czas powiększenia
+    }
+
+    // Rozpocznij animację za pomocą interwału
+    animatePrice(); // Wykonaj animację początkową
+    setInterval(animatePrice, 2000); // Powtarzaj co 2 sekundy
 });

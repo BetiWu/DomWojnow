@@ -170,28 +170,25 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Opcjonalny cień dla lepszego efektu */
 }
 
-
 .old-price {
-    text-decoration: line-through;
-    color: gray; /* Opcjonalnie: Możesz zmienić kolor na szary */
+    text-decoration: line-through; /* Efekt przekreślenia */
+    color: gray; /* Kolor szary dla przekreślenia */
+    display: inline-block; /* Pozwala na animacje transformacji */
+    transition: transform 0.5s; /* Płynne przejście */
 }
 
+.old-price.animated-old {
+    transform: scale(1.5); /* Powiększenie */
+}
+
+.animated-price {
+    display: inline-block; /* Pozwól na animację transform */
+    transition: transform 0.5s;
+}
+
+/* Opcjonalne dodatkowe stylowanie */
 .new-price {
-    animation: pulse 1.5s infinite; /* Używa animacji o nazwie 'pulse' */
-    font-size: 2em; /* Powiększenie tekstu */
-    color: red; /* Kolor pulsującej ceny */
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1); /* Powiększenie do 110% */
-    }
-    100% {
-        transform: scale(1);
-    }
+    font-size: 2.5em; /* Ustaw rozmiar czcionki dla ceny */
 }
 
 
