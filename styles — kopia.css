@@ -1,0 +1,88 @@
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #f0f0f0; /* Podstawowy kolor tła w odcieniach szarości */
+}
+
+.background {
+    position: fixed; /* Ustawienie tła na Fixed */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('odkryj.jpg'); /* Ustawienie tła na nowe zdjęcie */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Tło za innymi elementami */
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.options {
+    width: 100%;
+}
+
+#options ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#options li {
+    margin: 10px 0;
+}
+
+#options a {
+    text-decoration: none;
+    color: #000; /* Szary kolor tekstu */
+    font-size: 2em; 
+    transition: color 0.3s; /* Przejrzystość koloru */
+    padding: 10px; /* Dodanie przestrzeni */
+    background: rgba(255, 255, 255, 0.8); /* Biel z przezroczystością */
+    border-radius: 5px; /* Zaokrąglenie krawędzi */
+}
+
+#options a:hover {
+    background-color: rgba(255, 255, 255, 0.5); /*jaśniejsze tło przy najeżdżaniu */
+}
+
+.description, .gallery, .contact {
+    background-color: rgba(255, 255, 255, 0.9); /* Białe tło dla rozwijanych sekcji */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #000; /* Czarny kolor tekstu w opisach */
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto; /* Umożliwienie przewijania w poziomie */
+}
+
+.carousel img {
+    max-height: 300px; /* Ustal wysokość obrazków w karuzeli */
+    margin-right: 10px; /* Dodanie odstępu między obrazkami */
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black; /* Czarny kolor dla stopki */
+    font-size: 1em; 
+    text-align: center; 
+    z-index: 1; 
+    padding: 10px; 
+}

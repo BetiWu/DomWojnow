@@ -1,0 +1,33 @@
+.description-section {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.description-section.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Usuń kropki z listy */
+ul {
+    list-style: none; /* Usunięcie kropek */
+    padding: 0; /* Usunięcie domyślnego wypełnienia */
+}
+
+h3 {
+    color: #2b7a2b;
+    font-size: 1.5em;
+}
+
+/* Dodanie ikony przed każdym punktem */
+.description-section::before {
+    content: "✅"; /* Możesz tu dodać inną ikonę */
+    margin-right: 8px;
+    color: #28a745; /* Zielony kolor ikony */
+}

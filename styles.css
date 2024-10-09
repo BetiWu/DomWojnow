@@ -1,0 +1,144 @@
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow: hidden; /* Ukryj przewijanie */
+}
+
+.background {
+    position: fixed; /* Zmienione na fixed, aby tło nie przesuwało się przy przewijaniu */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Szerokość widoku 100% */
+    height: 100vh; /* Wysokość widoku 100% */
+    background-image: url('tlo.jpg'); /* Podstaw tło obrazem */
+    background-size: cover; /* Obraz dostosowany proporcjonalnie do tła */
+    background-position: center; /* Wyśrodkowanie obrazu */
+    animation: zoom 8s infinite alternate; /* Animacja zoom z czasem 8 sekund */
+    z-index: -1; /* Tło za innymi elementami */
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1) rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+        transform: scale(1.3) rotateX(15deg) rotateY(20deg);
+    }
+    50% {
+        transform: scale(1.3) rotateX(15deg) rotateY(-20deg);
+    }
+    75% {
+        transform: scale(1.3) rotateX(15deg) rotateY(20deg);
+    }
+    100% {
+        transform: scale(1) rotateX(0deg) rotateY(0deg);
+    }
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ustawić start w kontenerze */
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding-top: 100px; /* Dodanie paddingu tylko u góry */
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.5), /* Cień 1 */
+        2px 2px 0 rgba(0, 0, 0, 0.4), /* Cień 2 */
+        3px 3px 0 rgba(0, 0, 0, 0.3), /* Cień 3 */
+        4px 4px 0 rgba(0, 0, 0, 0.2), /* Cień 4 */
+        5px 5px 0 rgba(0, 0, 0, 0.1); /* Cień 5 */
+}
+
+#main-title {
+    cursor: pointer;
+    font-size: 3em; /* Domyślny rozmiar czcionki */
+    transition: font-size 0.3s ease; /* Efekt przejścia */
+    z-index: 1;
+    color: white;
+}
+
+#main-title:hover {
+    font-size: 5em; /* Zwiększenie rozmiaru po najechaniu */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Podświetlenie tytułu */
+}
+
+.hover-text {
+    display: none; /* Ukrycie domyślne */
+    color: white; /* Biały kolor dla tekstu "Kliknij" */
+    font-size: 2em; /* Mniejszy rozmiar tekstu "Kliknij" */
+    margin-top: -40px; /* Ustawienie negatywnej wartości, aby tekst był wyżej */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+#main-title:hover + .hover-text {
+    display: block; /* Pokaż tekst "Kliknij" */
+}
+
+#options {
+    margin-top: -60px;
+    opacity: 1; /* Ustawienie widoczności na 1 */
+    transition: opacity 0.3s ease;
+}
+
+#options ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; 
+}
+
+#options li {
+    margin: 10px 0;
+}
+
+#options a {
+    text-decoration: none;
+    color: white; 
+    font-size: 3em; 
+    transition: color 0.3s, background-color 0.3s; /* Dodaj przejrzystość dla koloru i tła */
+    padding: 10px; /* Dodaj trochę przestrzeni */
+    border-radius: 5px; /* Zaokrąglenie krawędzi */
+}
+
+/* Hover effect */
+#options a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Jasne tło przy najeździe */
+    color: #FFFF00; /* Zmiana koloru tekstu na czarny */
+    border-radius: 10px;
+}
+
+.footer {
+    position: fixed; /* Zmienione na fixed, aby stopka była zawsze na dole */
+    bottom: 0; /* Ustaw odległość od dołu na 0 */
+    left: 50%; 
+    transform: translateX(-50%);
+    color: cream; 
+    font-size: 1em; /* poprawione na poprawny zapis */
+    text-align: center; 
+    opacity: 1; 
+    padding: 10px; 
+    background-color: transparent; 
+    z-index: 1; 
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.5), /* Cień dla delikatnego obramowania */
+        -1px -1px 0 rgba(0, 0, 0, 0.5),
+        1px -1px 0 rgba(0, 0, 0, 0.5),
+        -1px 1px 0 rgba(0, 0, 0, 0.5);
+   
+}
+
+.some-class {
+    width: 100%; /* zamiast 600px */
+}
+
+
+@media (max-width: 768px) {
+    .some-class {
+        font-size: 14px; /* Mniejszy rozmiar tekstu na małych ekranach */
+    }
+}
